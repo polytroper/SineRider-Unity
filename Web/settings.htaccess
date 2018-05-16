@@ -1,0 +1,6 @@
+### MAIN DEFAULTS
+Options +ExecCGI -Indexes
+DirectoryIndex About.html
+DefaultLanguage en-US
+AddDefaultCharset UTF-8
+ServerSignature Off

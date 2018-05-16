@@ -1,0 +1,66 @@
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <script type="text/javascript">
+    <!--
+    var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
+    if (document.location.protocol == 'https:')
+      unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+    document.write('<script type="text/javascript" src="' + unityObjectUrl + '"></script>');
+    -->
+  </script>
+  <title>Symplexiom</title>
+  <link rel="icon" 
+      type="image/png" 
+      href="./favicon.png">
+  <link type="text/css" rel="stylesheet" href="main.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="slide-panel">
+      <h1 class="top">SYMPLEXIOM</h1>
+      <h1 class="bottom">SYMPLEXIOM</h1>
+    </div>
+    <h2>Emerging Eventually.</h2>
+    <!--<ul class="icon-list">
+      <li><a href="https://docs.google.com/uc?export=download&confirm=nftH&id=0B-IDljTiyd4JNDRqUnFuSHpBSEU" style="background-color: #8cff66;"></a></li>
+    </ul>-->
+    <p class="footer">Copyright &copy; 2014 - Chris Walker</p>
+  </div>
+  <div class="demo-frame">
+    <span class="demo-subtitle">Water currently visible with DX11 only</span>
+    <a class="close-link">(Close Demo)</a>
+    <div id="unityPlayer">
+      <div class="missing">
+          <a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+              <img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
+          </a>
+      </div>
+    </div>
+  </div>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      /*$('.slide-panel').hover(function() {
+        $('.slide-content').slideDown();
+      }, function() {
+        $('.slide-content').slideUp();
+      });
+      $('a').click(function(ev) {
+        $('.demo-frame').toggle();
+        var u = new UnityObject2();
+        u.initPlugin(document.getElementById("unityPlayer"), $(ev.currentTarget).attr('href'));
+        return false;
+      });*/ 
+      $('h1').click(function(ev) {
+        $('.demo-frame').toggle();
+        var u = new UnityObject2();
+        u.initPlugin(document.getElementById("unityPlayer"), "https://s3-us-west-2.amazonaws.com/symplexiom/demo.unity3d");
+        return false;
+      });
+
+      $('.demo-frame > .close-link').click(function() {
+        $('.demo-frame').hide();
+      });
+    });
+  </script>
+</body>

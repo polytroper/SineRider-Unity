@@ -1,0 +1,34 @@
+Initialize engine version: 5.0.0f4 (5b98b70ebeb9)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [nvd3dum.dll 9.18.13.4752]
+    Renderer: NVIDIA GeForce GTX 970
+    Vendor:   NVIDIA
+    VRAM:     3072 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 INTZ=1 NULL=1 RESZ=0 SlowINTZ=0
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\cwalker\Dev\SineRider\Windows\SineRider_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\cwalker\Dev\SineRider\Windows\SineRider_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\cwalker\Dev\SineRider\Windows\SineRider_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\cwalker\Dev\SineRider\Windows\SineRider_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\cwalker\Dev\SineRider\Windows\SineRider_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\cwalker\Dev\SineRider\Windows\SineRider_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\cwalker\Dev\SineRider\Windows\SineRider_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading C:\Users\cwalker\Dev\SineRider\Windows\SineRider_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\cwalker\Dev\SineRider\Windows\SineRider_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\cwalker\Dev\SineRider\Windows\SineRider_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\cwalker\Dev\SineRider\Windows\SineRider_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\cwalker\Dev\SineRider\Windows\SineRider_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\cwalker\Dev\SineRider\Windows\SineRider_Data\Managed\SixBySeven.dll (this message is harmless)
+Loading C:\Users\cwalker\Dev\SineRider\Windows\SineRider_Data\Managed\SixBySeven.dll into Unity Child Domain
+Platform assembly: C:\Users\cwalker\Dev\SineRider\Windows\SineRider_Data\Managed\Gif.Components.dll (this message is harmless)
+Loading C:\Users\cwalker\Dev\SineRider\Windows\SineRider_Data\Managed\Gif.Components.dll into Unity Child Domain
+Platform assembly: C:\Users\cwalker\Dev\SineRider\Windows\SineRider_Data\Managed\Vectrosity.dll (this message is harmless)
+Loading C:\Users\cwalker\Dev\SineRider\Windows\SineRider_Data\Managed\Vectrosity.dll into Unity Child Domain
+- Completed reload, in  0.060 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
+<RI> Initialized touch support.
+Platform assembly: C:\Users\cwalker\Dev\SineRider\Windows\SineRider_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\cwalker\Dev\SineRider\Windows\SineRider_Data\Managed\System.dll (this message is harmless)

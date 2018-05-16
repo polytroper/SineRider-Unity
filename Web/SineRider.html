@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="icon" type="image/ico" href="https://s3.amazonaws.com/sinerider/favicon.png">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+		<link rel='stylesheet' href='http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css'>
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
+		<script type="text/javascript">
+		<!--
+		var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
+		if (document.location.protocol == 'https:')
+			unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+		document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
+		-->
+		</script>
+		<title>SineRider</title>
+		<script type="text/javascript">
+		<!--
+			var config = {
+				width: 640, 
+				height: 640,
+				params: { enableDebugging:"0" }
+				
+			};
+			var u = new UnityObject2(config);
+			
+			jQuery(function() {
+
+				var $missingScreen = jQuery("#unityPlayer").find(".missing");
+				var $brokenScreen = jQuery("#unityPlayer").find(".broken");
+				$missingScreen.hide();
+				$brokenScreen.hide();
+
+				u.observeProgress(function (progress) {
+					switch(progress.pluginStatus) {
+						case "broken":
+							$brokenScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$brokenScreen.show();
+						break;
+						case "missing":
+							$missingScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$missingScreen.show();
+						break;
+						case "installed":
+							$missingScreen.remove();
+						break;
+						case "first":
+						break;
+					}
+				});
+				u.initPlugin(jQuery("#unityPlayer")[0], "https://s3.amazonaws.com/sinerider/SineRider.unity3d");
+			});
+		-->
+		</script>
+		<style type="text/css">
+			body {
+				font-family: Helvetica, Verdana, Arial, sans-serif;
+				background-color: white;
+				color: black;
+				text-align: center;
+			}
+			a.download:link, a.download:visited {
+				color: #000000;
+				text-decoration:none;
+			}
+			a.download:active, a.download:hover {
+				text-decoration:none;
+				color: #ffffff;
+			}
+			.header {
+				font-size: 14px;
+				margin: 0px 0px 0px 0px;
+			}
+			p.footer {
+				font-size: 14px;
+			}
+			div.content {
+				margin: auto;
+				width: 640px;
+			}
+			div.broken,
+			div.missing {
+				margin: auto;
+				position: relative;
+				top: 50%;
+				width: 193px;
+			}
+			div.broken a,
+			div.missing a {
+				height: 63px;
+				position: relative;
+				top: -31px;
+			}
+			div.broken img,
+			div.missing img {
+				border-width: 2px;
+				border-color: black;
+			}
+			div.broken {
+				display: none;
+			}
+			div#unityPlayer {
+				cursor: default;
+				height: 640px;
+				width: 640px;
+			}
+			div.demo-frame {
+				outline: solid 1px #000000;
+				width: 640px;
+				height: 640px;
+				margin: auto;
+				margin-top: 32px;
+				margin-bottom: 32px;
+			}
+			.download {
+				display: inline-table;
+			}
+			.download .button {
+				display: table-cell;
+				vertical-align: middle;
+				height: 24px;
+				width: 256px;
+				font-size: 20px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 32px;
+				background-color: #808080;
+
+			}
+			.text-muted {
+				text-align: left;
+				font-size: 24px;
+			}
+			a.download {
+				font-size: 16px;
+				background-color: #808080;
+				color: white;
+				height: 16px;
+				width: 256px;
+				border-width: 1px;
+				border-color: black;
+				border-style: solid;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 0px 2px 0px 2px;
+			}
+			p.main {
+				font-size: 15px;
+				margin: 8px 0px 24px 0px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="container">
+		    <div class="header">
+		        <ul class="nav nav-pills pull-right">
+		            <li><a href="https://s3.amazonaws.com/sinerider/SineRider+Windows.zip">Download for Windows</a></li>
+		            <li><a href="https://s3.amazonaws.com/sinerider/SineRider+OSX.zip">Download for OSX</a></li>
+		            <li><a href="https://s3.amazonaws.com/sinerider/SineRider+Linux.zip">Download for Linux</a></li>
+		        </ul>
+		        <h3 class="text-muted"><a href="./About.html">About SineRider</a></h3>
+		    </div>
+			<div class="demo-frame">
+				<div id="unityPlayer">
+					<div class="missing">
+						<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+							<img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<p class="main">SineRider currently requires the <a class="link" href="http://unity3d.com/webplayer" target="_blank">Unity Web Player</a> to play online, which runs only on Windows and OSX.</p>
+
+			<p class="footer">&laquo; A game by Chris Walker | cwalker@sineridergame.com | v0.3.36 Alpha &raquo;</p>
+		</div>
+	</body>
+</html>

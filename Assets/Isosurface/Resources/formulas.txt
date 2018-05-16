@@ -1,0 +1,7 @@
+Sphere: Sqrt(x*x + y*y + z*z) 
+Cylinder: (x*x + y*y - 2*2)  
+Deformed Cyliner: (x*x + y*y - 2*2) - Sqrt(x*x + y*y + z*z) 
+Octahedron: abs(x)+abs(y)+abs(z)-2
+Hull: pow(x,2) + y
+Cone: sqrt(pow(x,2) + pow(z,2)) + y
+Paraboloid: x*x + y + z*z - 1
